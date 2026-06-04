@@ -20,7 +20,7 @@ namespace PW_Museo.Repositories
             return await connection.QueryAsync<Show>("SELECT * FROM Shows");
         }
 
-        public async Task<Show> GetByIdAsync(Guid id)
+        public async Task<Show?> GetByIdAsync(Guid id)
         {
             using var connection = new MySqlConnection(_connectionString);
             return await connection.QueryFirstOrDefaultAsync<Show>("SELECT * FROM Shows WHERE Id = @Id", new { Id = id });

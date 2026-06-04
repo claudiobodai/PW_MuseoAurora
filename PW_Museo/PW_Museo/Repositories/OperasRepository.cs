@@ -20,7 +20,7 @@ namespace PW_Museo.Repositories
             return await connection.QueryAsync<Opera>("SELECT * FROM Operas");
         }
 
-        public async Task<Opera> GetByIdAsync(Guid id)
+        public async Task<Opera?> GetByIdAsync(Guid id)
         {
             using var connection = new MySqlConnection(_connectionString);
             return await connection.QueryFirstOrDefaultAsync<Opera>("SELECT * FROM Operas WHERE Id = @Id", new { Id = id });
