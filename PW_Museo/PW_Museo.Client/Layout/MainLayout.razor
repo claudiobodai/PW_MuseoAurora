@@ -1,19 +1,12 @@
 ﻿@inherits LayoutComponentBase
 
 <div class="page">
-    <aside class="sidebar">
+    <header class="top-nav">
         <NavMenu />
-    </aside>
+    </header>
 
     <main>
-        <header class="site-header px-4">
-            <div class="header-inner">
-                <h1 class="site-title">Museo Aurora</h1>
-                <a class="about-link" href="https://learn.microsoft.com/aspnet/core/" target="_blank">About Museum</a>
-            </div>
-        </header>
-
-        <article class="content px-4">
+        <article class="content">
             @Body
         </article>
     </main>
